@@ -1,0 +1,86 @@
+html {
+  font-family: $base-font;
+  font-weight: 300;
+  color: #333;
+  font-size: 20px;
+}
+
+body {
+  
+}
+
+a {
+
+}
+
+p {
+
+}
+
+h1,h2,h3,h4,h5 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+// HEADINGS
+h1 {
+  font-family: $header-font;
+  font-size: 90px;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: $header-font;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 3rem;
+
+  @include breakpoint(800px) {
+    font-size: 70px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    background-color: #333;
+    height: 1px;
+    position: absolute;
+    width: 100px;
+    left: 50%;
+  }
+
+  &:before {
+    bottom: -1rem;
+    transform: translateX(calc(-50% - 5px));
+  }
+
+  &:after {
+    bottom: -1.5rem;
+    transform: translateX(calc(-50% + 5px));
+  }
+}
+
+h3 {
+  font-family: $header-font;
+  font-size: 30px;
+  font-weight: 400;
+
+  @include breakpoint(800px) {
+    font-size: 48px;
+  }
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+a {
+  color: #333333;
+}
+
+

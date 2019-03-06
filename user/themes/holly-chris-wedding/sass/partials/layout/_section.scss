@@ -1,0 +1,38 @@
+.section {
+  padding: 6rem 0;
+
+  &.section--peach {
+    background: linear-gradient(338.85deg, #FAEBE1 0%, #F2D2C0 100%);
+  }
+}
+
+.section__header {
+  margin-bottom: 8rem;
+
+  h2 {
+    text-align: center;
+    display: block;
+    position: relative;
+
+    &:before,
+    &:after {
+      display: block;
+      height: 1px;
+      width: 100px;
+      content: '';
+      background-color: $grey-med;
+      position: absolute;
+      transform: translateX(-50%);
+    }
+
+    &:before {
+      bottom: -1.5rem;
+      left: calc(50% + 15px)
+    }
+
+    &:after {
+      bottom: -2.15rem;
+      left: calc(50% - 15px)
+    }
+  }
+}

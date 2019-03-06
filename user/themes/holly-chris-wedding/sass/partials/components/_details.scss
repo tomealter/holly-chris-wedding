@@ -1,0 +1,22 @@
+.details {
+
+}
+
+.details__row {
+  display: flex;
+}
+
+.details__map {
+  @include svg-background(map);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: solid 10px #fff;
+  width: 400px;
+  height: 400px;
+  margin-right: 2rem;
+}
+
+.details__content {
+  
+}

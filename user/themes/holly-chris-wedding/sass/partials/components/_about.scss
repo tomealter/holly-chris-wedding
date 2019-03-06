@@ -1,0 +1,183 @@
+$animation-duration: 13s;
+
+.about {
+
+}
+
+.about__row {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 8rem;
+  position: relative;
+}
+
+.about__profile {
+  text-align: center;
+  position: relative;
+
+  &.about__profile--group {
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .about__image {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+.about__image {
+  border-radius: 50%;
+  border: solid 1px $grey-med;
+  height: 200px;
+  margin-bottom: .5rem;
+  overflow: hidden;
+  width: 200px;
+  position: relative;
+
+  &:after {
+    @include svg-background(heart-box);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    display: block;
+    opacity: 0;
+  }
+
+  img {
+    display: block;
+    position: relative;
+    max-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.about__name {
+  margin-bottom: 1rem;
+}
+
+.about__tinder-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__cross,
+.about__heart {
+  @include svg-background(cross);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  border-radius: 50%;
+  border: solid 8px #f9f9f9;
+  height: 50px;
+  width: 50px;
+  margin: 0 5px;
+}
+
+.about__cross {
+  @include svg-background(cross);
+  background-size: 45%;
+}
+
+.about__heart {
+  @include svg-background(heart);
+  background-position: 50% 53%;
+}
+
+// Animations
+@keyframes heart-box-1 {
+  0% { opacity: 0; }
+  13% { opacity: 0; }
+  20% { opacity: .7; }
+  100% { opacity: .7; }
+}
+
+@keyframes heart-box-2 {
+  0% { opacity: 0; }
+  28% { opacity: 0; }
+  35% { opacity: .7; }
+  100% { opacity: .7; }
+}
+
+@keyframes heart-1 {
+  10% { border-color: #f9f9f9; background-color: rgba($green, 0); }
+  15% { border-color: $green; background-color: rgba($green, .1); }
+  100% { border-color: $green; background-color: rgba($green, .1); }
+}
+
+@keyframes heart-2 {
+  25% { border-color: #f9f9f9; background-color: rgba($green, 0); }
+  30% { border-color: $green; background-color: rgba($green, .1); }
+  100% { border-color: $green; background-color: rgba($green, .1); }
+}
+
+@keyframes profile-holly {
+  35% { opacity: 1; left: 0; }
+  60% { opacity: 0; left: 20%; }
+  100% { opacity: 0; left: 20%; }
+}
+
+@keyframes profile-chris {
+  35% { opacity: 1; left: 0; }
+  60% { opacity: 0; left: -20%; }
+  100% { opacity: 0; left: -20%; }
+}
+
+@keyframes profile-group {
+  40% { opacity: 0;  }
+  65% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+// Activate animations
+.about__profile--holly {
+  position: relative;
+
+  .animation-active & {
+    animation: profile-holly $animation-duration 0s infinite;
+
+    .about__heart {
+      animation: heart-1 $animation-duration 0s infinite;
+    }
+
+    .about__image {
+      &:after {
+        animation: heart-box-1 $animation-duration 0s infinite;
+      }
+    }
+  }
+}
+
+.about__profile--chris {
+  position: relative;
+
+  .animation-active & {
+    animation: profile-chris $animation-duration 0s infinite;
+
+    .about__heart {
+      animation: heart-2 $animation-duration 0s infinite;
+    }
+
+    .about__image {
+      &:after {
+        animation: heart-box-2 $animation-duration 0s infinite;
+      }
+    }
+  }
+}
+
+.about__profile--group {
+  .animation-active & {
+    animation: profile-group $animation-duration 0s infinite;
+  }
+}

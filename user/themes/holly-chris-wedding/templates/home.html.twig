@@ -1,0 +1,29 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+  {# Hero Section #}
+  {% include "partials/hero.html.twig" with {
+    title: page.header.hero_title,
+    subtitle: page.header.hero_subtitle,
+    image: page.media[page.header.hero_image].url
+  }%}
+
+  {# How We Met Section #}
+  {% include "partials/about.html.twig" with {
+    about_title: page.header.how_title,
+    about_image_holly: page.media[page.header.how_image_holly],
+    about_image_chris: page.media[page.header.how_image_chris],
+    about_image_group: page.media[page.header.how_image_group],
+  }%}
+
+  {# Details Section #}
+  {% include "partials/details.html.twig" with {
+    details_title: page.header.details_title,
+    details_content: page.header.details_editor
+  }%}
+
+  
+
+
+{% endblock %}
