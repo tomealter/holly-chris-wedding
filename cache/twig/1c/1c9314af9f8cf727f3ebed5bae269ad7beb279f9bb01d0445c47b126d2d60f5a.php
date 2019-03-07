@@ -28,13 +28,13 @@ class __TwigTemplate_21907bf8b08e0c419673c71a03af28f781ef95767534df66aef9d8ed76c
   <div class=\"details\">
     <div class=\"l-constrain\">
       <div class=\"details__row\">
-        <div class=\"details__map\"></div>
         <div class=\"details__content\">
           ";
-        // line 12
+        // line 11
         echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->markdownFunction(($context["details_content"] ?? null));
         echo "
         </div>
+        <div class=\"details__map\"></div>
       </div>
     </div>
   </div>
@@ -53,7 +53,7 @@ class __TwigTemplate_21907bf8b08e0c419673c71a03af28f781ef95767534df66aef9d8ed76c
 
     public function getDebugInfo()
     {
-        return array (  35 => 12,  24 => 4,  19 => 1,);
+        return array (  34 => 11,  24 => 4,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -75,10 +75,10 @@ class __TwigTemplate_21907bf8b08e0c419673c71a03af28f781ef95767534df66aef9d8ed76c
   <div class=\"details\">
     <div class=\"l-constrain\">
       <div class=\"details__row\">
-        <div class=\"details__map\"></div>
         <div class=\"details__content\">
           {{ details_content|markdown }}
         </div>
+        <div class=\"details__map\"></div>
       </div>
     </div>
   </div>

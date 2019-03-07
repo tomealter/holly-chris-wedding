@@ -1,9 +1,21 @@
+$bp-details-1: 600px;
+$bp-details-2: 900px;
+
 .details {
 
 }
 
 .details__row {
-  display: flex;
+  
+
+  @include breakpoint($bp-details-1) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @include breakpoint($bp-details-2) {
+    align-items: center;
+  }
 }
 
 .details__map {
@@ -12,11 +24,34 @@
   background-repeat: no-repeat;
   background-size: contain;
   border: solid 10px #fff;
-  width: 400px;
-  height: 400px;
-  margin-right: 2rem;
+  width: 100%;
+  height: 0;
+  padding-top: calc(100% - 20px);
+
+  @include breakpoint($bp-details-1) {
+    flex-basis: 270px;
+    flex-shrink: 0;
+    padding-top: 0;
+    height: 270px;
+    margin-right: 2rem;
+  }
+
+  @include breakpoint($bp-details-2) {
+    border: solid 15px #fff;
+    flex-basis: 400px;
+    height: 400px;
+  }
 }
 
 .details__content {
-  
+  margin-bottom: 1.5rem;
+
+  @include breakpoint($bp-details-1) {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+  }
 }

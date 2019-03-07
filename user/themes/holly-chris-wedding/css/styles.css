@@ -1,15 +1,23 @@
 /* generated with grunt-sass-globbing */
 /* generated with grunt-sass-globbing */
 /* generated with grunt-sass-globbing */
+* {
+  box-sizing: border-box; }
+
 html {
   font-family: "quicksand", sans-serif;
   font-weight: 300;
   color: #333;
-  font-size: 20px; }
+  font-size: 20px;
+  line-height: 1.4; }
+
+p {
+  margin-top: 0; }
 
 h1, h2, h3, h4, h5 {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: .5rem;
+  line-height: 1.1; }
 
 h1 {
   font-family: "sail", serif;
@@ -41,11 +49,14 @@ h2 {
 
 h3 {
   font-family: "sail", serif;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 400; }
   @media (min-width: 800px) {
     h3 {
-      font-size: 48px; } }
+      font-size: 40px; } }
+
+h4 {
+  font-size: 26px; }
 
 a {
   color: #333333; }
@@ -66,7 +77,7 @@ a {
     background: linear-gradient(338.85deg, #FAEBE1 0%, #F2D2C0 100%); }
 
 .section__header {
-  margin-bottom: 8rem; }
+  margin-bottom: 6rem; }
   .section__header h2 {
     text-align: center;
     display: block;
@@ -258,8 +269,34 @@ a {
 .animation-active .about__profile--group {
   animation: profile-group 13s 0s infinite; }
 
-.details__row {
-  display: flex; }
+.card {
+  border: solid 1px #ECECEC;
+  border-radius: 12px;
+  padding: 1rem 1.25rem 1.25rem 1.25rem;
+  text-decoration: none;
+  transition: all 200ms ease-out; }
+  .card:hover {
+    border-color: #8799BD;
+    box-shadow: 0 20px 40px -20px rgba(51, 51, 51, 0.2); }
+
+.card__eyebrow {
+  padding: .5rem 1.25rem .5rem 1.25rem;
+  margin-left: -1.25rem;
+  color: #ffffff;
+  background-color: #8799BD;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 1rem; }
+
+@media (min-width: 600px) {
+  .details__row {
+    display: flex;
+    flex-direction: row-reverse; } }
+
+@media (min-width: 900px) {
+  .details__row {
+    align-items: center; } }
 
 .details__map {
   background-image: url("../images/bg/map.png");
@@ -268,9 +305,42 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   border: solid 10px #fff;
-  width: 400px;
-  height: 400px;
-  margin-right: 2rem; }
+  width: 100%;
+  height: 0;
+  padding-top: calc(100% - 20px); }
+  @media (min-width: 600px) {
+    .details__map {
+      flex-basis: 270px;
+      flex-shrink: 0;
+      padding-top: 0;
+      height: 270px;
+      margin-right: 2rem; } }
+  @media (min-width: 900px) {
+    .details__map {
+      border: solid 15px #fff;
+      flex-basis: 400px;
+      height: 400px; } }
+
+.details__content {
+  margin-bottom: 1.5rem; }
+  @media (min-width: 600px) {
+    .details__content {
+      flex-grow: 1;
+      margin-bottom: 0; } }
+  .details__content h3 {
+    margin-bottom: 0.5rem; }
+
+@media (min-width: 600px) {
+  .flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .flex-grid > * {
+      flex-basis: calc((100% - 1.5rem) / 2); } }
+
+@media (min-width: 900px) {
+  .flex-grid > * {
+    flex-basis: calc((100% - 2.25rem) / 3); } }
 
 .header {
   position: absolute;

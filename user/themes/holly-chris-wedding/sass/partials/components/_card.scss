@@ -1,0 +1,23 @@
+.card {
+  border: solid 1px $grey-light;
+  border-radius: 12px;
+  padding: 1rem 1.25rem 1.25rem 1.25rem;
+  text-decoration: none;
+  transition: all 200ms ease-out;
+
+  &:hover {
+    border-color: $blue;
+    box-shadow: 0 20px 40px -20px rgba($grey-dark, .2);
+  }
+}
+
+.card__eyebrow {
+  padding: .5rem 1.25rem .5rem 1.25rem;
+  margin-left: -1.25rem;
+  color: #ffffff;
+  background-color: $blue;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}

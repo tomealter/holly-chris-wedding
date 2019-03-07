@@ -23,6 +23,12 @@
     details_content: page.header.details_editor
   }%}
 
+  {# Travel Section #}
+  {% include "partials/travel.html.twig" with {
+    travel_title: page.header.travel_title,
+    travel_cards: page.header.airports
+  }%}
+
   
 
 

@@ -56,6 +56,14 @@ class __TwigTemplate_ccfb4905ca8347344e0079b548519f414157888b463f5528a87a067e366
 ($context["page"] ?? null), "header", []), "details_editor", [])]));
         // line 25
         echo "
+  ";
+        // line 27
+        echo "  ";
+        $this->loadTemplate("partials/travel.html.twig", "home.html.twig", 27)->display(array_merge($context, ["travel_title" => $this->getAttribute($this->getAttribute(        // line 28
+($context["page"] ?? null), "header", []), "travel_title", []), "travel_cards" => $this->getAttribute($this->getAttribute(        // line 29
+($context["page"] ?? null), "header", []), "airports", [])]));
+        // line 31
+        echo "
   
 
 
@@ -74,7 +82,7 @@ class __TwigTemplate_ccfb4905ca8347344e0079b548519f414157888b463f5528a87a067e366
 
     public function getDebugInfo()
     {
-        return array (  58 => 25,  56 => 23,  55 => 22,  53 => 21,  50 => 19,  48 => 17,  47 => 16,  46 => 15,  45 => 14,  43 => 13,  40 => 11,  38 => 9,  37 => 8,  36 => 7,  34 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  66 => 31,  64 => 29,  63 => 28,  61 => 27,  58 => 25,  56 => 23,  55 => 22,  53 => 21,  50 => 19,  48 => 17,  47 => 16,  46 => 15,  45 => 14,  43 => 13,  40 => 11,  38 => 9,  37 => 8,  36 => 7,  34 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -110,6 +118,12 @@ class __TwigTemplate_ccfb4905ca8347344e0079b548519f414157888b463f5528a87a067e366
   {% include \"partials/details.html.twig\" with {
     details_title: page.header.details_title,
     details_content: page.header.details_editor
+  }%}
+
+  {# Travel Section #}
+  {% include \"partials/travel.html.twig\" with {
+    travel_title: page.header.travel_title,
+    travel_cards: page.header.airports
   }%}
 
   

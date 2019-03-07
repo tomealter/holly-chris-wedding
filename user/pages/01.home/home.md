@@ -7,7 +7,21 @@ how_image_holly: holly.jpg
 how_image_chris: chris.jpg
 how_image_group: group.jpg
 details_title: 'Wedding Details'
-details_editor: "### September 7th, 2019\r\n\r\nCeremony: 4:00pm\r\nReception: 6:00pm\r\n\r\n### The Henderson Beach Resort\r\n\r\n200 Henderson Resort Way\r\nDestin FL 32541\r\n855.741.2777"
+details_editor: "### September 7th, 2019\r\n\r\nCeremony: 4:00pm  \r\nReception: 6:00pm  \r\n\r\n### The Henderson Beach Resort\r\n\r\n200 Henderson Resort Way  \r\nDestin FL 32541  \r\n855.741.2777"
+travel_title: Travel
+airports:
+    -
+        code: PNS
+        title: 'Pensacola International Airport'
+        summary: 'Recommended since they have (2) direct flights from DCA on American Airlines. About a 1hr 20min drive to Destin.'
+    -
+        code: VPS
+        title: 'Destin/Ft. Walton Beach Airport'
+        summary: 'Closest airport to Destin. Only about a 30min drive.'
+    -
+        code: ECP
+        title: 'Panama City / Northwest Florida Beaches International Airport'
+        summary: 'About a 1hr 10min drive to Destin.'
 images:
     'user/pages/01.home/H&C-1.jpg':
         name: 'H&C-1.jpg'
