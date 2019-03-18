@@ -2,7 +2,13 @@
   padding: 6rem 0;
 
   &.section--peach {
-    background: linear-gradient(338.85deg, #FAEBE1 0%, #F2D2C0 100%);
+    // background: linear-gradient(338.85deg, #FAEBE1 0%, #F2D2C0 100%);
+    background-color: rgba($peach, .5);
+  }
+
+  &.section--blue {
+    // background: linear-gradient(326.28deg, #9AAACA 0%, #8799BD 100%);
+    background-color: rgba($blue, .2);
   }
 }
 

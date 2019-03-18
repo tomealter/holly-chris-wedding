@@ -16,7 +16,7 @@ class __TwigTemplate_21907bf8b08e0c419673c71a03af28f781ef95767534df66aef9d8ed76c
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<div class=\"section section--peach\">
+        echo "<div class=\"section section--peach\" id=\"details\">
   <div class=\"section__header\">
     <div class=\"l-constrain\">
       <h2>";
@@ -66,7 +66,7 @@ class __TwigTemplate_21907bf8b08e0c419673c71a03af28f781ef95767534df66aef9d8ed76c
 
     public function getSourceContext()
     {
-        return new Twig_Source("<div class=\"section section--peach\">
+        return new Twig_Source("<div class=\"section section--peach\" id=\"details\">
   <div class=\"section__header\">
     <div class=\"l-constrain\">
       <h2>{{ details_title }}</h2>

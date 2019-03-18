@@ -64,6 +64,33 @@ class __TwigTemplate_ccfb4905ca8347344e0079b548519f414157888b463f5528a87a067e366
 ($context["page"] ?? null), "header", []), "airports", [])]));
         // line 31
         echo "
+  ";
+        // line 33
+        echo "  ";
+        $this->loadTemplate("partials/accomodations.html.twig", "home.html.twig", 33)->display(array_merge($context, ["accomodations_title" => $this->getAttribute($this->getAttribute(        // line 34
+($context["page"] ?? null), "header", []), "accomodations_title", []), "accomodations_cards" => $this->getAttribute($this->getAttribute(        // line 35
+($context["page"] ?? null), "header", []), "hotel_list", [])]));
+        // line 37
+        echo "
+  ";
+        // line 39
+        echo "  ";
+        $this->loadTemplate("partials/activities.html.twig", "home.html.twig", 39)->display(array_merge($context, ["activities_title" => $this->getAttribute($this->getAttribute(        // line 40
+($context["page"] ?? null), "header", []), "activities_title", []), "activities_cards" => $this->getAttribute($this->getAttribute(        // line 41
+($context["page"] ?? null), "header", []), "activities_list", [])]));
+        // line 43
+        echo "
+  ";
+        // line 45
+        echo "  ";
+        $this->loadTemplate("partials/registry.html.twig", "home.html.twig", 45)->display(array_merge($context, ["registry_title" => $this->getAttribute($this->getAttribute(        // line 46
+($context["page"] ?? null), "header", []), "registry_title", []), "zola_url" => $this->getAttribute($this->getAttribute(        // line 47
+($context["page"] ?? null), "header", []), "registry_zola_url", []), "cb_url" => $this->getAttribute($this->getAttribute(        // line 48
+($context["page"] ?? null), "header", []), "registry_cb_url", []), "ws_url" => $this->getAttribute($this->getAttribute(        // line 49
+($context["page"] ?? null), "header", []), "registry_ws_url", []), "wayfair_url" => $this->getAttribute($this->getAttribute(        // line 50
+($context["page"] ?? null), "header", []), "registry_wayfair_url", [])]));
+        // line 52
+        echo "
   
 
 
@@ -82,7 +109,7 @@ class __TwigTemplate_ccfb4905ca8347344e0079b548519f414157888b463f5528a87a067e366
 
     public function getDebugInfo()
     {
-        return array (  66 => 31,  64 => 29,  63 => 28,  61 => 27,  58 => 25,  56 => 23,  55 => 22,  53 => 21,  50 => 19,  48 => 17,  47 => 16,  46 => 15,  45 => 14,  43 => 13,  40 => 11,  38 => 9,  37 => 8,  36 => 7,  34 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  93 => 52,  91 => 50,  90 => 49,  89 => 48,  88 => 47,  87 => 46,  85 => 45,  82 => 43,  80 => 41,  79 => 40,  77 => 39,  74 => 37,  72 => 35,  71 => 34,  69 => 33,  66 => 31,  64 => 29,  63 => 28,  61 => 27,  58 => 25,  56 => 23,  55 => 22,  53 => 21,  50 => 19,  48 => 17,  47 => 16,  46 => 15,  45 => 14,  43 => 13,  40 => 11,  38 => 9,  37 => 8,  36 => 7,  34 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -124,6 +151,27 @@ class __TwigTemplate_ccfb4905ca8347344e0079b548519f414157888b463f5528a87a067e366
   {% include \"partials/travel.html.twig\" with {
     travel_title: page.header.travel_title,
     travel_cards: page.header.airports
+  }%}
+
+  {# Accomodations Section #}
+  {% include \"partials/accomodations.html.twig\" with {
+    accomodations_title: page.header.accomodations_title,
+    accomodations_cards: page.header.hotel_list
+  }%}
+
+  {# Things To Do Section #}
+  {% include \"partials/activities.html.twig\" with {
+    activities_title: page.header.activities_title,
+    activities_cards: page.header.activities_list
+  }%}
+
+  {# Registry Section #}
+  {% include \"partials/registry.html.twig\" with {
+    registry_title: page.header.registry_title,
+    zola_url: page.header.registry_zola_url,
+    cb_url: page.header.registry_cb_url,
+    ws_url: page.header.registry_ws_url,
+    wayfair_url: page.header.registry_wayfair_url
   }%}
 
   

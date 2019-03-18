@@ -30,7 +30,7 @@ class __TwigTemplate_9a6069afeb47b31e87c72e61e5fad577540e78348cdacf996d4df738ac6
     <a href=\"#accomodations\" class=\"menu__link\">Accomodations</a>
   </li>
   <li class=\"menu__item\">
-    <a href=\"#things-to-do\" class=\"menu__link\">Things To Do</a>
+    <a href=\"#activities\" class=\"menu__link\">Things To Do</a>
   </li>
   <li class=\"menu__item\">
     <a href=\"#registry\" class=\"menu__link\">Registry</a>
@@ -72,7 +72,7 @@ class __TwigTemplate_9a6069afeb47b31e87c72e61e5fad577540e78348cdacf996d4df738ac6
     <a href=\"#accomodations\" class=\"menu__link\">Accomodations</a>
   </li>
   <li class=\"menu__item\">
-    <a href=\"#things-to-do\" class=\"menu__link\">Things To Do</a>
+    <a href=\"#activities\" class=\"menu__link\">Things To Do</a>
   </li>
   <li class=\"menu__item\">
     <a href=\"#registry\" class=\"menu__link\">Registry</a>

@@ -1,5 +1,10 @@
-<a href="{{ url }}" class="card {{ custom_classes }}">
+<a href="{{ url }}" class="card {{ custom_classes }}" target="_blank">
   <div class="card__eyebrow">{{ eyebrow }}</div>
   <h4 class="card__title">{{ title }}</h4>
-  <div class="card__summary">{{ summary }}</div>
+  {% if summary %}
+    <div class="card__summary">{{ summary }}</div>
+  {% endif %}
+  {% if distance %}
+    <div class="card__distance">{{ distance }}</div>
+  {% endif %}
 </a>

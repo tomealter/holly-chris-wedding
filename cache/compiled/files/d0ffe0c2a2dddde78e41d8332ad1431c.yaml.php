@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/talter/MAMP-Sites/holly-chris-wedding/user/themes/holly-chris-wedding/blueprints/home.yaml',
-    'modified' => 1551226776,
+    'modified' => 1552843988,
     'data' => [
         'title' => 'Homepage Blueprint',
         'form' => [
@@ -113,6 +113,10 @@ return [
                                                 '.summary' => [
                                                     'type' => 'textarea',
                                                     'label' => 'Airport Summary'
+                                                ],
+                                                '.url' => [
+                                                    'type' => 'text',
+                                                    'label' => 'Aiport Link'
                                                 ]
                                             ]
                                         ]
@@ -135,6 +139,10 @@ return [
                                             'style' => 'vertical',
                                             'label' => 'Hotels',
                                             'fields' => [
+                                                '.price' => [
+                                                    'type' => 'text',
+                                                    'label' => 'Price ($$)'
+                                                ],
                                                 '.title' => [
                                                     'type' => 'text',
                                                     'label' => 'Hotel Name'
@@ -143,9 +151,13 @@ return [
                                                     'type' => 'textarea',
                                                     'label' => 'Hotel Summary'
                                                 ],
-                                                '.link' => [
+                                                '.url' => [
                                                     'type' => 'text',
                                                     'label' => 'Url'
+                                                ],
+                                                '.distance' => [
+                                                    'type' => 'text',
+                                                    'label' => 'Distance from Venue'
                                                 ]
                                             ]
                                         ]
@@ -168,6 +180,10 @@ return [
                                             'style' => 'vertical',
                                             'label' => 'Things To Do List',
                                             'fields' => [
+                                                '.type' => [
+                                                    'type' => 'text',
+                                                    'label' => 'Type of Activity'
+                                                ],
                                                 '.title' => [
                                                     'type' => 'text',
                                                     'label' => 'Title'
@@ -181,6 +197,35 @@ return [
                                                     'label' => 'Url'
                                                 ]
                                             ]
+                                        ]
+                                    ]
+                                ],
+                                'header.fieldset_registry' => [
+                                    'type' => 'fieldset',
+                                    'title' => 'Registry Section',
+                                    'icon' => 'comments',
+                                    'collapsed' => true,
+                                    'collapsible' => true,
+                                    'fields' => [
+                                        'header.registry_title' => [
+                                            'type' => 'text',
+                                            'label' => 'Section Title'
+                                        ],
+                                        'header.registry_zola_url' => [
+                                            'type' => 'text',
+                                            'label' => 'Zola Url'
+                                        ],
+                                        'header.registry_cb_url' => [
+                                            'type' => 'text',
+                                            'label' => 'Crate & Barrel Url'
+                                        ],
+                                        'header.registry_ws_url' => [
+                                            'type' => 'text',
+                                            'label' => 'Williams Sonoma Url'
+                                        ],
+                                        'header.registry_wayfair_url' => [
+                                            'type' => 'text',
+                                            'label' => 'Wayfair Url'
                                         ]
                                     ]
                                 ],

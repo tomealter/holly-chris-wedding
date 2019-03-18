@@ -1,6 +1,6 @@
 // Custom scripts file
 
-(function ($) {
+jQuery(document).ready(function ($) {
 
   'use strict';
 
@@ -26,7 +26,7 @@
 
   setTimeout( function() {
     new ScrollMagic.Scene({
-      offset: 0,
+      offset: -10,
       triggerElement: '.about',
       triggerHook: .5,
       reverse: false
@@ -34,9 +34,60 @@
       .setClassToggle('.about', 'animation-active')
       // .addIndicators()
       .addTo(controller);
-  }, 300)
+  }, 300);
   
 
+  var mobileMenuButton = $('.mobile-menu-button');
+  var mobileMenu = $('.mobile-menu');
+  var mobileMenuLink = $('.mobile-menu .menu__link');
+  
+
+  if (mobileMenuButton.length) {
+    console.log('the button exists');
+  }
+
+  console.log('is this thing on?');
+
+  mobileMenuButton.on('click', function (e) {
+    e.preventDefault();
+    console.log('you clicked it');
+    if ($(this).hasClass('is-active')) {
+      $(this).removeClass('is-active');
+      mobileMenu.removeClass('is-active');
+    }
+    else {
+      $(this).addClass('is-active');
+      mobileMenu.addClass('is-active');
+    }
+  });
+
+  mobileMenuLink.on('click', function(e) {
+    e.preventDefault();
+    mobileMenuButton.removeClass('is-active');
+    mobileMenu.removeClass('is-active');
+  });
 
 
-})(jQuery);
+  // Smooth Scroll to Anchors
+  $("a").on('click', function (event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});

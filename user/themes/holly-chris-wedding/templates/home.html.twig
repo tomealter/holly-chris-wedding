@@ -29,6 +29,27 @@
     travel_cards: page.header.airports
   }%}
 
+  {# Accomodations Section #}
+  {% include "partials/accomodations.html.twig" with {
+    accomodations_title: page.header.accomodations_title,
+    accomodations_cards: page.header.hotel_list
+  }%}
+
+  {# Things To Do Section #}
+  {% include "partials/activities.html.twig" with {
+    activities_title: page.header.activities_title,
+    activities_cards: page.header.activities_list
+  }%}
+
+  {# Registry Section #}
+  {% include "partials/registry.html.twig" with {
+    registry_title: page.header.registry_title,
+    zola_url: page.header.registry_zola_url,
+    cb_url: page.header.registry_cb_url,
+    ws_url: page.header.registry_ws_url,
+    wayfair_url: page.header.registry_wayfair_url
+  }%}
+
   
 
 

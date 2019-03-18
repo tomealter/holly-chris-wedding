@@ -6,16 +6,20 @@ $bp-flex-grid-2: 900px;
   @include breakpoint($bp-flex-grid-1) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+  }
+}
 
-    > * {
-      flex-basis: calc((100% - 1.5rem) / 2);
-    }
+.flex-column {
+  margin-bottom: 1.5rem;
+
+  @include breakpoint($bp-flex-grid-1) {
+    flex-basis: 50%;
+    padding: 0 .75rem;
   }
 
   @include breakpoint($bp-flex-grid-2) {
-    > * {
-      flex-basis: calc((100% - 2.25rem) / 3);
-    }
+    flex-basis: percentage(1/3);
   }
 }

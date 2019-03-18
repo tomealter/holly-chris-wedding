@@ -1,0 +1,58 @@
+.registry {
+
+}
+
+.registry__grid {
+
+  > * {
+    margin: 0 auto 3rem;
+  }
+
+  @include breakpoint(600px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    > * {
+      flex-basis: 40%;
+      padding: 0 1rem;
+      margin: 0 0 3rem 0;
+    }
+  }
+}
+
+.registry__link {
+  @include image-replace(500px, 150px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  max-width: 80%;
+  opacity: 1;
+  transition: opacity 250ms ease-out;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &.registry__link--zola {
+    @include svg-background(zola);
+    background-size: contain;
+  }
+
+  &.registry__link--cb {
+    @include svg-background(cb);
+    @include image-replace(500px, 80px);
+    background-size: contain;
+  }
+
+  &.registry__link--ws {
+    @include svg-background(ws);
+    background-size: contain;
+  }
+
+  &.registry__link--wayfair {
+    @include svg-background(wayfair);
+    @include image-replace(500px, 80px);
+    background-size: contain;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="section section--blue" id="accomodations">
+  <div class="section__header">
+    <div class="l-constrain">
+      <h2>{{ accomodations_title }}</h2>
+    </div>
+  </div>
+  <div class="accomodations">
+    <div class="l-constrain">
+      <div class="flex-grid">
+        {% for card in accomodations_cards %}
+          <div class="flex-column">
+            {% include "partials/card.html.twig" with {
+              title: card.title,
+              summary: card.summary,
+              eyebrow: card.price,
+              url: card.url,
+              custom_classes: 'card--peach',
+              distance: card.distance
+            }%}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

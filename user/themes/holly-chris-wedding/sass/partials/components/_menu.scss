@@ -1,9 +1,13 @@
 .menu {
-  display: flex;
+  display: none;
   align-items: center;
   margin-left: -.75rem;
   margin-right: -0.75rem;
   padding-left: 0;
+
+  @include breakpoint(900px) {
+    display: flex;
+  }
 }
 
 .menu__item {
@@ -34,6 +38,47 @@
   &:hover {
     &:after {
       left: 0;
+    }
+  }
+}
+
+.mobile-menu {
+  background-color: rgba(#000, .9);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-out;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: visible;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+  }
+
+  .menu__item {
+    display: block;
+  }
+
+  .menu__link {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 28px;
+
+    &:after {
+      background-color: #fff;
     }
   }
 }

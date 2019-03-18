@@ -16,7 +16,7 @@ class __TwigTemplate_c1a8a0ea7a36648aff8fe0a78de7efaf662851742bea785061efa6e0f72
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<div class=\"section\">
+        echo "<div class=\"section\" id=\"travel\">
   <div class=\"section__header\">
     <div class=\"l-constrain\">
       <h2>";
@@ -47,13 +47,17 @@ class __TwigTemplate_c1a8a0ea7a36648aff8fe0a78de7efaf662851742bea785061efa6e0f72
         }
         foreach ($context['_seq'] as $context["_key"] => $context["card"]) {
             // line 11
-            echo "          ";
-            $this->loadTemplate("partials/card.html.twig", "partials/travel.html.twig", 11)->display(array_merge($context, ["title" => $this->getAttribute(            // line 12
-$context["card"], "title", []), "summary" => $this->getAttribute(            // line 13
-$context["card"], "summary", []), "eyebrow" => $this->getAttribute(            // line 14
-$context["card"], "code", [])]));
-            // line 16
-            echo "        ";
+            echo "          <div class=\"flex-column\">
+            ";
+            // line 12
+            $this->loadTemplate("partials/card.html.twig", "partials/travel.html.twig", 12)->display(array_merge($context, ["title" => $this->getAttribute(            // line 13
+$context["card"], "title", []), "summary" => $this->getAttribute(            // line 14
+$context["card"], "summary", []), "eyebrow" => $this->getAttribute(            // line 15
+$context["card"], "code", []), "url" => $this->getAttribute(            // line 16
+$context["card"], "url", [])]));
+            // line 18
+            echo "          </div>
+        ";
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
             $context['loop']['first'] = false;
@@ -66,7 +70,7 @@ $context["card"], "code", [])]));
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['card'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 20
         echo "      </div>
     </div>
   </div>
@@ -85,7 +89,7 @@ $context["card"], "code", [])]));
 
     public function getDebugInfo()
     {
-        return array (  70 => 17,  56 => 16,  54 => 14,  53 => 13,  52 => 12,  50 => 11,  33 => 10,  24 => 4,  19 => 1,);
+        return array (  74 => 20,  59 => 18,  57 => 16,  56 => 15,  55 => 14,  54 => 13,  53 => 12,  50 => 11,  33 => 10,  24 => 4,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -98,7 +102,7 @@ $context["card"], "code", [])]));
 
     public function getSourceContext()
     {
-        return new Twig_Source("<div class=\"section\">
+        return new Twig_Source("<div class=\"section\" id=\"travel\">
   <div class=\"section__header\">
     <div class=\"l-constrain\">
       <h2>{{ travel_title }}</h2>
@@ -108,11 +112,14 @@ $context["card"], "code", [])]));
     <div class=\"l-constrain\">
       <div class=\"flex-grid\">
         {% for card in travel_cards %}
-          {% include \"partials/card.html.twig\" with {
-            title: card.title,
-            summary: card.summary,
-            eyebrow: card.code
-          }%}
+          <div class=\"flex-column\">
+            {% include \"partials/card.html.twig\" with {
+              title: card.title,
+              summary: card.summary,
+              eyebrow: card.code,
+              url: card.url
+            }%}
+          </div>
         {% endfor %}
       </div>
     </div>

@@ -45,22 +45,22 @@ class __TwigTemplate_f9efd183f5f2d570ec0667e8e15939e052d67a398ce0a8f59c4e4444fde
 ";
         // line 36
         $this->displayBlock('header', $context, $blocks);
-        // line 44
+        // line 50
         echo "
 ";
-        // line 45
+        // line 51
         $this->displayBlock('body', $context, $blocks);
-        // line 52
+        // line 58
         echo "
 ";
-        // line 53
+        // line 59
         $this->displayBlock('footer', $context, $blocks);
-        // line 60
+        // line 66
         echo "
 ";
-        // line 61
+        // line 67
         $this->displayBlock('bottom', $context, $blocks);
-        // line 64
+        // line 70
         echo "
 </body>
 </html>
@@ -101,13 +101,13 @@ class __TwigTemplate_f9efd183f5f2d570ec0667e8e15939e052d67a398ce0a8f59c4e4444fde
     ";
         // line 17
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 25
+        // line 22
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "css", [], "method");
         echo "
-
+    
     ";
-        // line 27
+        // line 24
         $this->displayBlock('javascripts', $context, $blocks);
         // line 30
         echo "    ";
@@ -130,24 +130,24 @@ class __TwigTemplate_f9efd183f5f2d570ec0667e8e15939e052d67a398ce0a8f59c4e4444fde
         echo "        ";
         $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/styles.css", 1 => 98], "method");
         // line 21
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"], "method");
-        // line 22
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"], "method");
-        // line 23
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/script.js"], "method");
-        // line 24
         echo "    ";
     }
 
-    // line 27
+    // line 24
     public function block_javascripts($context, array $blocks = [])
     {
+        // line 25
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 110], "method");
+        // line 26
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"], "method");
+        // line 27
+        echo "        ";
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"], "method");
         // line 28
         echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 100], "method");
+        $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/script.js"], "method");
         // line 29
         echo "    ";
     }
@@ -158,52 +158,61 @@ class __TwigTemplate_f9efd183f5f2d570ec0667e8e15939e052d67a398ce0a8f59c4e4444fde
         // line 37
         echo "    <div class=\"header\">
         <div class=\"header__inner\">
-            <a href=\"#\" class=\"site-name\">Holly & Chris Wedding</a>
+            <!-- <a href=\"#\" class=\"site-name\">Holly & Chris Wedding</a> -->
             ";
         // line 40
         $this->loadTemplate("partials/menu.html.twig", "partials/base.html.twig", 40)->display($context);
         // line 41
-        echo "        </div>
+        echo "            <a href=\"#\" class=\"mobile-menu-button\">
+                <div class=\"mobile-menu-button__bar\"></div>
+            </a>
+        </div>
     </div>
+    <div class=\"mobile-menu\">
+        ";
+        // line 47
+        $this->loadTemplate("partials/menu.html.twig", "partials/base.html.twig", 47)->display($context);
+        // line 48
+        echo "    </div>
 ";
     }
 
-    // line 45
+    // line 51
     public function block_body($context, array $blocks = [])
     {
-        // line 46
+        // line 52
         echo "    <section id=\"body\">
         <div class=\"wrapper padding\">
         ";
-        // line 48
+        // line 54
         $this->displayBlock('content', $context, $blocks);
-        // line 49
+        // line 55
         echo "        </div>
     </section>
 ";
     }
 
-    // line 48
+    // line 54
     public function block_content($context, array $blocks = [])
     {
     }
 
-    // line 53
+    // line 59
     public function block_footer($context, array $blocks = [])
     {
-        // line 54
-        echo "    <div class=\"footer text-center\">
+        // line 60
+        echo "    <!-- <div class=\"footer text-center\">
         <div class=\"wrapper padding\">
             <p><a href=\"http://getgrav.org\">Grav</a> was <i class=\"fa fa-code\"></i> with <i class=\"fa fa-heart\"></i> by <a href=\"http://www.rockettheme.com\">RocketTheme</a>.</p>
         </div>
-    </div>
+    </div> -->
 ";
     }
 
-    // line 61
+    // line 67
     public function block_bottom($context, array $blocks = [])
     {
-        // line 62
+        // line 68
         echo "    ";
         echo $this->getAttribute(($context["assets"] ?? null), "js", [0 => "bottom"], "method");
         echo "
@@ -222,7 +231,7 @@ class __TwigTemplate_f9efd183f5f2d570ec0667e8e15939e052d67a398ce0a8f59c4e4444fde
 
     public function getDebugInfo()
     {
-        return array (  207 => 62,  204 => 61,  195 => 54,  192 => 53,  187 => 48,  181 => 49,  179 => 48,  175 => 46,  172 => 45,  166 => 41,  164 => 40,  159 => 37,  156 => 36,  152 => 29,  149 => 28,  146 => 27,  142 => 24,  139 => 23,  136 => 22,  133 => 21,  130 => 20,  127 => 19,  124 => 18,  121 => 17,  113 => 30,  111 => 27,  105 => 25,  103 => 17,  98 => 15,  94 => 14,  91 => 13,  89 => 12,  77 => 7,  74 => 6,  71 => 5,  64 => 64,  62 => 61,  59 => 60,  57 => 53,  54 => 52,  52 => 45,  49 => 44,  47 => 36,  42 => 34,  39 => 33,  37 => 5,  32 => 3,  29 => 2,  27 => 1,);
+        return array (  216 => 68,  213 => 67,  204 => 60,  201 => 59,  196 => 54,  190 => 55,  188 => 54,  184 => 52,  181 => 51,  176 => 48,  174 => 47,  166 => 41,  164 => 40,  159 => 37,  156 => 36,  152 => 29,  149 => 28,  146 => 27,  143 => 26,  140 => 25,  137 => 24,  133 => 21,  130 => 20,  127 => 19,  124 => 18,  121 => 17,  113 => 30,  111 => 24,  105 => 22,  103 => 17,  98 => 15,  94 => 14,  91 => 13,  89 => 12,  77 => 7,  74 => 6,  71 => 5,  64 => 70,  62 => 67,  59 => 66,  57 => 59,  54 => 58,  52 => 51,  49 => 50,  47 => 36,  42 => 34,  39 => 33,  37 => 5,  32 => 3,  29 => 2,  27 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -255,16 +264,16 @@ class __TwigTemplate_f9efd183f5f2d570ec0667e8e15939e052d67a398ce0a8f59c4e4444fde
         {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/pure-min.css', 100) %}
         {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 99) %}
         {% do assets.addCss('theme://css/styles.css', 98) %}
+    {% endblock %}
+    {{ assets.css() }}
+    
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 110) %}
         {% do assets.addJs('//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js') %}
         {% do assets.addJs('//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js') %}
         {% do assets.addJs('theme://js/script.js') %}
     {% endblock %}
-    {{ assets.css() }}
-
-    {% block javascripts %}
-        {% do assets.addJs('jquery', 100) %}
-    {% endblock %}
-    {{ assets.js() }}
+    {{ assets.js()|raw }}
 
 {% endblock head%}
 </head>
@@ -273,9 +282,15 @@ class __TwigTemplate_f9efd183f5f2d570ec0667e8e15939e052d67a398ce0a8f59c4e4444fde
 {% block header %}
     <div class=\"header\">
         <div class=\"header__inner\">
-            <a href=\"#\" class=\"site-name\">Holly & Chris Wedding</a>
+            <!-- <a href=\"#\" class=\"site-name\">Holly & Chris Wedding</a> -->
             {% include \"partials/menu.html.twig\" %}
+            <a href=\"#\" class=\"mobile-menu-button\">
+                <div class=\"mobile-menu-button__bar\"></div>
+            </a>
         </div>
+    </div>
+    <div class=\"mobile-menu\">
+        {% include \"partials/menu.html.twig\" %}
     </div>
 {% endblock %}
 
@@ -288,11 +303,11 @@ class __TwigTemplate_f9efd183f5f2d570ec0667e8e15939e052d67a398ce0a8f59c4e4444fde
 {% endblock %}
 
 {% block footer %}
-    <div class=\"footer text-center\">
+    <!-- <div class=\"footer text-center\">
         <div class=\"wrapper padding\">
             <p><a href=\"http://getgrav.org\">Grav</a> was <i class=\"fa fa-code\"></i> with <i class=\"fa fa-heart\"></i> by <a href=\"http://www.rockettheme.com\">RocketTheme</a>.</p>
         </div>
-    </div>
+    </div> -->
 {% endblock %}
 
 {% block bottom %}

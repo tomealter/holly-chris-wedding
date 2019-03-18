@@ -23,8 +23,13 @@ $animation-duration: 13s;
     transform: translate(-50%, -50%);
 
     .about__image {
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 250px;
+
+      @include breakpoint(600px) {
+        width: 300px;
+        height: 300px;
+      }
     }
   }
 }
@@ -32,11 +37,16 @@ $animation-duration: 13s;
 .about__image {
   border-radius: 50%;
   border: solid 1px $grey-med;
-  height: 200px;
+  height: 130px;
   margin-bottom: .5rem;
   overflow: hidden;
-  width: 200px;
+  width: 130px;
   position: relative;
+
+  @include breakpoint(600px) {
+    height: 200px;
+    width: 200px;
+  }
 
   &:after {
     @include svg-background(heart-box);
@@ -123,13 +133,15 @@ $animation-duration: 13s;
 
 @keyframes profile-holly {
   35% { opacity: 1; left: 0; }
-  60% { opacity: 0; left: 20%; }
+  50% { opacity: 0; }
+  60% { left: 20% }
   100% { opacity: 0; left: 20%; }
 }
 
 @keyframes profile-chris {
   35% { opacity: 1; left: 0; }
-  60% { opacity: 0; left: -20%; }
+  50% { opacity: 0; }
+  60% { left: -20% }
   100% { opacity: 0; left: -20%; }
 }
 

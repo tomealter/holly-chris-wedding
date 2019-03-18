@@ -1,0 +1,66 @@
+.mobile-menu-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  display: block;
+  z-index: 10;
+
+  @include breakpoint(900px) {
+    display: none;
+  }
+}
+
+.mobile-menu-button__bar {
+  background-color: #333;
+  height: 8px;
+  width: 50px;
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 150ms ease-out;
+  
+  &:before,
+  &:after {
+    height: 8px;
+    display: block;
+    content: '';
+    background-color: #333;
+    width: 50px;
+    position: relative;
+    animation-duration: .5s;
+    transition: top 150ms ease-in 150ms, transform 150ms ease-out;
+  }
+  
+  &:before {
+    top: -16px;
+    animation-duration: .5s;
+  }
+  
+  &:after {
+    top: 7px;
+    animation-duration: .5s;
+  }
+  
+  .is-active & {
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 150ms ease-out 150ms;
+    background-color: #fff;
+    
+    &:before {
+      top: 0;
+      transition: top 150ms ease-in, transform 150ms ease-out 150ms;
+      background-color: #fff;
+    }
+    
+    &:after {
+      top: -8px;
+      transform: rotate(-90deg);
+      transition: top 150ms ease-in, transform 150ms ease-out 150ms;
+      background-color: #fff;
+    }
+  }
+}
